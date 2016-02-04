@@ -1,0 +1,56 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+.wrapper{
+	width: 50%;
+	margin: 0 auto;
+}
+
+.mans{
+	width: 45%;
+	float: left;
+	margin-top: 20px;
+	margin-left: 30px;
+	border: 1px solid black;
+	text-align: center;
+}
+
+.mans .lab-container{
+	background: #F96F6F;
+}
+
+.girls{
+	width: 45%;
+	margin-top: 20px;
+	float: right;
+	margin-right: 30px;
+	border: 1px solid black;
+	text-align: center;
+}
+
+.girls .lab-container{
+	background: #ACD9FF;
+}
+
+.lab-container{
+	width: 30%;
+	float: left;
+}
+
+.info-container{
+	width: 70%;
+	float: right;
+}
+
+.man-defeat{
+	height: 20px;
+	background: #999;
+}
+
+.defeat-button{
+	width: 100%;
+	color: black;
+	font-size: 1.2em;
+}
