@@ -16,6 +16,15 @@ class Man extends Human{
 	}
 
 /*
+* Метод устанавливает значение победы для команды женщин
+*/
+
+	static function setWin()
+	{
+		self::$status = "Wins";
+	}
+
+/*
 * Метод, устанавливающий значение проигрыша для команды мужчин
 */
 
@@ -30,7 +39,7 @@ class Man extends Human{
 
 	static function getStatus()
 	{
-		return $this->status;
+		return self::$status;
 	}
 
 }

@@ -17,7 +17,16 @@ class Girl extends Human{
 	}
 
 /*
-* Метод, устанавливающий значение проигрыша для команды мужчин
+* Метод устанавливает значение победы для команды женщин
+*/
+
+	static function setWin()
+	{
+		self::$status = "Wins";
+	}
+
+/*
+* Метод, устанавливающий значение проигрыша для команды женщин
 */
 
 	static function setDefeat()
@@ -31,7 +40,7 @@ class Girl extends Human{
 
 	static function getStatus()
 	{
-		return $this->status;
+		return self::$status;
 	}
 
 }

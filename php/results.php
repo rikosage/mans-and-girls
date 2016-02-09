@@ -17,11 +17,16 @@
 			if ($_POST['defeat'] == "mans")
 			{
 				Man::setDefeat();
-				echo "Mans " . Man::$status;
+				Girl::setWin();
+				echo "Mans "  . Man::getStatus()  . "<br>";
+				echo "Girls " . Girl::getStatus() . "<br>";
 			}
 			else
 			{
-				echo "Girls Defeat";
+				Man::setWin();
+				Girl::setDefeat();
+				echo "Mans "  . Man::getStatus()  . "<br>";
+				echo "Girls " . Girl::getStatus() . "<br>";
 			}
 		}
 	}
