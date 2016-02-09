@@ -1,4 +1,7 @@
 <?php 
+/*
+* Основной класс, с методами, которые одинаковы для наследников
+*/
 
 abstract class Human {
 
@@ -8,7 +11,10 @@ abstract class Human {
 	public $age = "";
 	public $role = ""; 
 
-	public function __construct($name, $surname, $age = "Unknown", $role = "", $side = "Wild")
+/*
+* В конструктор передается имя и фамилия, возраст, роль в команде. 
+*/
+	function __construct($name, $surname, $age = "Unknown", $role = NULL)
 	{
 		$this->name = $name;
 		$this->surname = $surname;
@@ -17,22 +23,40 @@ abstract class Human {
 		$this->setSex();
 	}
 
+/*
+* Метод, определяюший пол человека. Тело метода описывается к классах наследниках.
+*/
+
 	abstract public function setSex();
+
+/*
+* Метод, возвращающий имя человека
+*/
 
 	public function getName()
 	{
 		return $this->name;
 	}
 
+/*
+* Метод, возвращающий фамилию человека
+*/
+
 	public function getSurname()
 	{
 		return $this->surname;
 	}
 
+/*
+* Метод, возвращающий роль в команде
+*/
+
 	public function getRole()
 	{
 		$this->role;
 	}
+
+/*Метод принимает целочисленное значение, а возвращает текстовое название роли в команде*/
 
 	private function setRole($role)
 	{
@@ -57,6 +81,15 @@ abstract class Human {
 				$this->role = "Civil";
 				break;
 		}
+	}
+
+	function __destruct()
+	{
+		$this->sex = "";
+		$this->name = "";
+		$this->surname = "";
+		$this->age = "";
+		$this->role = "";
 	}
 
 }
